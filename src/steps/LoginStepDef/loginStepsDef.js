@@ -10,14 +10,13 @@ module.exports = function given() {
     this.When(
         /^I set user "([^"]*)?" and password "([^"]*)?"$/, function(arg1,arg2) {
             LoginPage.open();
-            LoginPage.username.setValue(arg1);
-            LoginPage.password.setValue(arg2);
-            
+            LoginPage.username.setValue(arg1)
+            LoginPage.password.setValue(arg2) 
         });
 
     this.And(
-        /^I click the login button$/,
+        /^I click the login button$/,function(){
             LoginPage.open();
             LoginPage.submit(); 
-        );
+        });
 }

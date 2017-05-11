@@ -1,4 +1,4 @@
-//import page from '../pageobject/page'
+import page from '../pageobject/page'
 
 var formPage = Object.create(page, {
     /**
