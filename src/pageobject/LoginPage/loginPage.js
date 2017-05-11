@@ -1,4 +1,4 @@
-import page from '../pageobject/page'
+//import page from '../pageobject/page'
 
 var formPage = Object.create(page, {
     /**
@@ -9,15 +9,10 @@ var formPage = Object.create(page, {
     submitButton: {
       get: function () { return $('#login'); }
     },
-    flash:    { get: function () { return $('#flash'); } },
+    
+    //flash:    { get: function () { return $('#flash'); } 
 
-    /**
-     * sobre escribo los metodos
-     */
-    open: { value: function() {
-        page.open.call(this, 'login');
-    } },
-
+    //CLick button login
     submit: { value: function() {
         this.submitButton.click();
     } }
