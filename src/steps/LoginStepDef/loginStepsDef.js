@@ -8,11 +8,10 @@ module.exports = function given() {
     );
 
     this.When(
-        /^I set user "([^"]*)?" and password "([^"]*)?"$/,
+        /^I set user "([^"]*)?" and password "([^"]*)?"$/, function(arg1,arg2) {
             LoginPage.open();
             LoginPage.username.setValue(arg1);
             LoginPage.password.setValue(arg2);
-            LoginPage.submit();
-        );
-
+            LoginPage.submit(); 
+        });
 }
