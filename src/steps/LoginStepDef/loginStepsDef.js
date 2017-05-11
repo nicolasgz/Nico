@@ -12,6 +12,12 @@ module.exports = function given() {
             LoginPage.open();
             LoginPage.username.setValue(arg1);
             LoginPage.password.setValue(arg2);
-            LoginPage.submit(); 
+            
         });
+
+    this.And(
+        /^I click the login button$/,
+            LoginPage.open();
+            LoginPage.submit(); 
+        );
 }
