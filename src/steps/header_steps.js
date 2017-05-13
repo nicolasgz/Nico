@@ -1,4 +1,5 @@
 var Header = require('../pages/header_page.js');
+var expect = require('chai').expect;
 
 module.exports = function() {
   
