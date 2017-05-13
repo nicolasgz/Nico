@@ -122,6 +122,7 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework
     // installed before running any tests.
     framework: 'cucumber',
+    debug: true,
     //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
