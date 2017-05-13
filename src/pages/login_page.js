@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = {
 
     loginPage: {
@@ -17,7 +18,7 @@ module.exports = {
     	browser.click(this.loginPage.loginButton);
     },
 
-    isErrorMessageVisible: function(visibility){
+    isErrorMessageVisible: function(){
     	return browser.isVisible(this.loginPage.errorMessage);
     }
     
