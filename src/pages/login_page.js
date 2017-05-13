@@ -1,13 +1,27 @@
+var Utils = require('../pages/utils_page.js');
+
 'use strict';
 module.exports = {
 
     loginPage: {
       usernameInput: '#username',
-      passwordInput: '#password'
+      passwordInput: '#password',
+      loginButton: 	'#Login',
+      errorMessage: '#error'
   },
 
     setData: function(user, pass) {
-        browser.setValue(this.loginPage.usernameInput, 'test123');
-        browser.setValue(this.loginPage.passwordInput, '123test');
+        browser.setValue(this.loginPage.usernameInput, user);
+        browser.setValue(this.loginPage.passwordInput, pass);
+    },
+
+    clickLoginButton: function() {
+    	browser.click(this.loginPage.loginButton);
+    },
+
+    isErrorMessageVisible: function(visibility){
+    	return Utils.isElementVisible(visibility,this.loginPage.usernameInput)
     }
+
+    
 };

@@ -7,7 +7,6 @@ module.exports = function() {
 	});
   
 	this.Given(/^I open the url "([^"]*)"$/, function(site) {
-		// Utils.goTo(site);
-		browser.url(site);
+		Utils.goTo(site);
 	});
 };
