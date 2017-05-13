@@ -1,4 +1,5 @@
 var LoginPage = require('../pages/login_page.js');
+var expect = require('chai').expect;
 
 module.exports = function() {
 
@@ -11,6 +12,16 @@ module.exports = function() {
 	});
 
 	this.Then(/^I expect the error message visibility is "([^"]*)"$/, function(visibility) {
-	    LoginPage.isErrorMessageVisible(visibility);
+
+		var isVisible = LoginPage.isErrorMessageVisible(visibility);
+
+		if (visibility == 'false') {
+        expect(isVisible).to.not
+            .equal(true, `Expected error message is not to be visible`);
+	    } else {
+	        expect(isVisible).to
+	            .equal(true, `Expected error message to be visible`);
+	    }
+	    
 	});
 };
