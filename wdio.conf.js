@@ -1,5 +1,6 @@
 exports.config = {
-    //
+    // ...
+    //...
     // ==================
     // Specify Test Files
     // ==================
@@ -10,13 +11,19 @@ exports.config = {
     // `wdio` will be called from there.
     //
     specs: [
-        './src/features/**/*.feature',
+        './src/features/*.feature',
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
     ],
     //
+    reporters: ['spec'],
+    // reporterOptions: {
+    //     allure: {
+    //         outputDir: './src/reports/allure'
+    //     }
+    // },
     // ============
     // Capabilities
     // ============
@@ -61,17 +68,18 @@ exports.config = {
     //
     // Level of logging verbosity: silent | verbose | command | data | result |
     // error
-    logLevel: 'error',
+    logLevel: 'verbose',
     //
     // Enables colors for log output.
     coloredLogs: true,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: './errorShots/',
+    // screenshotPath: './errorShots/',
     //
     // Set a base URL in order to shorten url command calls. If your url
     // parameter starts with "/", then the base url gets prepended.
-    baseUrl: 'https://login.salesforce.com',
+    // baseUrl: 'https://login.salesforce.com',
+    baseUrl: 'https://www.google.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -105,7 +113,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They
     // enhance your test setup with almost no effort. Unlike plugins, they don't
     // add new commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone'],
+    // services: ['selenium-standalone'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -125,11 +133,10 @@ exports.config = {
     cucumberOpts: {
         require: [
             './src/steps/',
+            // './src/features/steps/',
         ], // <string[]> (file/dir) require files before executing features
         backtrace: false, // <boolean> show full backtrace for errors
-        compiler: [
-            'js:babel-register',
-        ], // <string[]> ("extension:module") require files with the given
+        compiler: ['js:babel-register'], // <string[]> ("extension:module") require files with the given
            // EXTENSION after requiring MODULE (repeatable)
         dryRun: false, // <boolean> invoke formatters without executing steps
         failFast: false, // <boolean> abort the run on first failure
@@ -169,6 +176,7 @@ exports.config = {
     // Gets executed before test execution begins. At this point you can access
     // all global variables, such as `browser`. It is the perfect place to
     // define custom commands.
+    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     before: function before() {
         /**
          * Setup the Chai assertion framework
@@ -179,6 +187,7 @@ exports.config = {
         global.assert = chai.assert;
         global.should = chai.should();
     },
+    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     //
     // Hook that gets executed before the suite starts
     // beforeSuite: function beforeSuite(suite) {
