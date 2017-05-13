@@ -1,5 +1,4 @@
 var LoginPage = require('../pages/login_page.js');
-var expect = require('chai').expect;
 
 module.exports = function() {
 
