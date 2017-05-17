@@ -12,4 +12,4 @@ Feature:
 		When I set the username "testingtrainingjs@oktana.io" and password "Salesforce1"
         And I click the login button
         Then I expect the error message visibility is "false"
-        Then I expect logged user is "oktana testings"
+        Then I expect logged user is "oktana testing"
