@@ -68,7 +68,7 @@ exports.config = {
     //
     // Level of logging verbosity: silent | verbose | command | data | result |
     // error
-    logLevel: 'silent',
+    logLevel: 'verbose',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -79,7 +79,7 @@ exports.config = {
     // Set a base URL in order to shorten url command calls. If your url
     // parameter starts with "/", then the base url gets prepended.
     // baseUrl: 'https://login.salesforce.com',
-    baseUrl: 'https://www.google.com',
+    // baseUrl: 'https://login.salesforce.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
