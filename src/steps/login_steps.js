@@ -36,7 +36,7 @@ module.exports = function() {
         LoginPage.forgot();
     });
 
-    this.Then(/^Login page is displayed: "([^"]*)"$/, function(expected){
+    this.Then(/^Login page is displayed: "(true|false)"$/, function(expected){
         var pageUrl = UtilsPage.getUrl();
         expect((pageUrl == 'https://login.salesforce.com/').toString()).to.equal(expected,
             `Current page: ${pageUrl} expected to be ${expected}.`);
