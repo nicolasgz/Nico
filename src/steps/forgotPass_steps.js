@@ -1,10 +1,11 @@
-var LoginPage = require('../pages/login_page.js');
-var HeaderPage = require('../pages/header_page.js');
 var ForgotPass = require('../pages/forgotPass_page.js');
+var UtilsPage = require('../pages/utils_page.js');
 module.exports = function() {
   
-        this.Then(/^the forgot your password page displays$/, function(){
+    this.Then(/^Forgot your password page is displayed: "([^"]*)"$/, function(expected){
         ForgotPass.isForgotPassFormVisible();
-	});
-
+        var pageUrl = UtilsPage.getUrl();
+        expect((pageUrl != 'https://login.salesforce.com/').toString()).to.equal(expected,
+            `Current page: ${pageUrl} expected to be ${expected}.`);
+    });
 };

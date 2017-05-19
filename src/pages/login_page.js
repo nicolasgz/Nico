@@ -12,7 +12,7 @@ loginPage: {
         logo:               '#logo',
         usernameLabel:      'label[for="username"',
         passwordLabel:      'label[for="password"',
-        errorMessage:       '#error'
+        errorMessageLabel:  '#error'
     },
 
     logoIsVisible: function(){
@@ -68,43 +68,6 @@ loginPage: {
     },
     
     getErrorMessage: function(){
-        return browser.getText(this.loginPage.errorMessage);
-    },
-
-    URLnotLogin: function(){
-        var pageUrl = browser.getUrl();
-        console.log(pageUrl);
-        assert.notEqual(pageUrl, 'https://login.salesforce.com/');
-    },
-     URLisLogin: function(){
-        var pageUrl = browser.getUrl();
-        console.log(pageUrl);
-        assert.equal(pageUrl, 'https://login.salesforce.com/');
+        return browser.getText(this.loginPage.errorMessageLabel);
     },
 };
-
-// 'use strict';
-
-// module.exports = {
-
-//     loginPage: {
-//       usernameInput: 	'#username',
-//       passwordInput: 	'#password',
-//       loginButton: 		'#Login',
-//       errorMessage: 	'#error'
-//   	},
-
-//     setData: function(user, pass) {
-//         browser.setValue(this.loginPage.usernameInput, user);
-//         browser.setValue(this.loginPage.passwordInput, pass);
-//     },
-
-//     clickLoginButton: function() {
-//     	browser.click(this.loginPage.loginButton);
-//     },
-
-//     isErrorMessageVisible: function(){
-//     	return browser.isVisible(this.loginPage.errorMessage);
-//     }
-    
-// };

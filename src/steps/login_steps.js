@@ -1,4 +1,5 @@
 var LoginPage = require('../pages/login_page.js');
+var UtilsPage = require('../pages/utils_page.js');
 
 module.exports = function() {
 
@@ -35,65 +36,45 @@ module.exports = function() {
         LoginPage.forgot();
     });
 
-    this.Then(/^home page displays$/, function(){
-        LoginPage.URLnotLogin();
+    this.Then(/^Login page is displayed: "([^"]*)"$/, function(expected){
+        var pageUrl = UtilsPage.getUrl();
+        expect((pageUrl == 'https://login.salesforce.com/').toString()).to.equal(expected,
+            `Current page: ${pageUrl} expected to be ${expected}.`);
     });
 
-    this.Then(/^login page displays$/, function(){
-        LoginPage.URLisLogin();
-    });
-
-    this.Then(/^I verify Logo displays$/, 
-
-        function(){
+    this.Then(/^I verify Logo displays$/, function(){
         LoginPage.logoIsVisible();
     });
 
-    this.Then(/^I verify username label displays$/, 
-
-        function(){
+    this.Then(/^I verify username label displays$/, function(){
         LoginPage.usernameLabelIsVisible();
     });
 
-    this.Then(/^I verify password label displays$/, 
-
-        function(){
+    this.Then(/^I verify password label displays$/, function(){
         LoginPage.passwordLabelIsVisible();
     });
 
-    this.Then(/^I verify username input displays$/, 
-
-        function(){
+    this.Then(/^I verify username input displays$/, function(){
         LoginPage.usernameInputIsVisible();
     });
 
-        this.Then(/^I verify password input displays$/, 
-
-        function(){
+    this.Then(/^I verify password input displays$/, function(){
         LoginPage.passwordInputIsVisible();
     });
 
-        this.Then(/^I verify login button displays$/, 
-
-        function(){
+    this.Then(/^I verify login button displays$/, function(){
         LoginPage.loginButtonIsVisible();
     });
 
-        this.Then(/^I verify remember me checkbox displays$/, 
-
-        function(){
+    this.Then(/^I verify remember me checkbox displays$/, function(){
         LoginPage.rememberCheckboxIsVisible();
     });
         
-        this.Then(/^I verify remember me label displays$/, 
-
-        function(){
+    this.Then(/^I verify remember me label displays$/, function(){
         LoginPage.rememberLabelIsVisible();
     });
 
-        this.Then(/^I verify forgot your password link displays$/, 
-
-        function(){
+    this.Then(/^I verify forgot your password link displays$/, function(){
         LoginPage.forgotPasswordIsVisible();
     });
 };

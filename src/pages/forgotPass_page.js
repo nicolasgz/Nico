@@ -9,7 +9,8 @@ module.exports = {
   	},
 
   	   isForgotPassFormVisible: function(){
-        return browser.getText(this.forgotPassPage.forgotPassForm);
+		browser.isVisible(this.forgotPassPage.forgotPassForm);
+		
     },
 
 };
