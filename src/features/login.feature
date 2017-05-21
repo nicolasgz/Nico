@@ -50,7 +50,7 @@ Feature: Salesforce Login
         When I set the username "testingtrainingjs@oktana.io" and password "Salesforce1"
         And I click login button
         Then I expect logged user is "oktana testing"
-    
+
     Scenario: Forgot Password link
         Given I open the url "https://login.salesforce.com/"
         When I click the forgot your password button

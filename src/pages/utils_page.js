@@ -1,18 +1,19 @@
 'use strict';
 
-module.exports = {
+class UtilsPage {
 
-    utils: {},
-
-    goTo: function(site){
+    goTo(site){
         browser.url(site);
         browser.setViewportSize({
-        width: 2500,
-        height: 1440,
-    })},
+            width: 2500,
+            height: 1440,
+        })
+    }
 
-    getUrl: function(){
-    	return browser.getUrl();
-    },
+    getUrl() {
+      return browser.getUrl();
+    }
 
-};
+}
+
+module.exports = new UtilsPage();

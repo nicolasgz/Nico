@@ -1,16 +1,13 @@
-// // // forgotPass_page.js
 'use strict';
 
-module.exports = {
+class ForgotPassPage {
 
-    forgotPassPage: {
-      forgotPassForm: 	'#forgotPassForm',
+    get forgotPassForm()  { return browser.element('#forgotPassForm'); }
 
-  	},
+  	isForgotPassFormVisible(){
+		this.forgotPassForm.isVisible();
+    }
 
-  	   isForgotPassFormVisible: function(){
-		browser.isVisible(this.forgotPassPage.forgotPassForm);
-		
-    },
+}
 
-};
+module.exports = new ForgotPassPage();

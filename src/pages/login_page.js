@@ -1,73 +1,75 @@
 'use strict';
 
-module.exports = {
+class LoginPage {
 
-loginPage: {
-        usernameInput:      '#username',
-        passwordInput:      '#password',
-        loginButton:        '#Login',
-        rememberCheckbox:   '#rememberUn',
-        rememberLabel:      'label[for="rememberUn"', 
-        forgotPassword:     '#forgot_password_link',
-        logo:               '#logo',
-        usernameLabel:      'label[for="username"',
-        passwordLabel:      'label[for="password"',
-        errorMessageLabel:  '#error'
-    },
+    get usernameInput()  { return browser.element('#username'); }
+    get passwordInput()  { return browser.element('#password'); }
+    get loginButton()  { return browser.element('#Login'); }
+    get rememberCheckbox()  { return browser.element('#rememberUn'); }
+    get rememberLabel()  { return browser.element('label[for="rememberUn"'); }
+    get forgotPassword()  { return browser.element('#forgot_password_link'); }
+    get logo()  { return browser.element('#logo'); }
+    get usernameLabel()  { return browser.element('label[for="username"'); }
+    get passwordLabel()  { return browser.element('label[for="password"'); }
+    get errorMessageLabel()  { return browser.element('#error'); }
 
-    logoIsVisible: function(){
-        browser.isVisible(this.loginPage.logo);
-    },
+    logoIsVisible(){
+        this.logo.isVisible();
+    }
 
-    rememberLabelIsVisible: function(){
-        browser.isVisible(this.loginPage.rememberLabel);
-    },
+    rememberLabelIsVisible(){
+        this.rememberLabel.isVisible();
+    }
 
-    usernameLabelIsVisible: function(){
-        browser.isVisible(this.loginPage.usernameLabel);
-    },
+    usernameLabelIsVisible(){
+        this.usernameLabel.isVisible();
+    }
 
-    passwordLabelIsVisible: function(){
-        browser.isVisible(this.loginPage.passwordLabel);
-    },
+    passwordLabelIsVisible(){
+        this.passwordLabel.isVisible();
+    }
 
-    usernameInputIsVisible: function(){
-        browser.isVisible(this.loginPage.usernameInput);
-    },
+    usernameInputIsVisible(){
+        this.usernameInput.isVisible();
+    }
 
-    passwordInputIsVisible: function(){
-        browser.isVisible(this.loginPage.passwordInput);
-    },
+    passwordInputIsVisible(){
+        this.passwordInput.isVisible();
+    }
 
-    loginButtonIsVisible: function(){
-        browser.isVisible(this.loginPage.loginButton);
-    },
+    loginButtonIsVisible(){
+        this.loginButton.isVisible();
+    }
 
-    rememberCheckboxIsVisible: function(){
-        browser.isVisible(this.loginPage.rememberCheckbox);
-    },
+    rememberCheckboxIsVisible(){
+        this.rememberCheckbox.isVisible();
+    }
 
-    rememberLabelIsVisible: function(){
-        browser.isVisible(this.loginPage.rememberLabel);
-    },
-    forgotPasswordIsVisible: function(){
-        browser.isVisible(this.loginPage.forgotPassword);
-    },
+    rememberLabelIsVisible(){
+        this.rememberLabel.isVisible();
+    }
 
-    setData: function(user, pass) {
-        browser.setValue(this.loginPage.usernameInput, user);
-        browser.setValue(this.loginPage.passwordInput, pass);
-    },
+    forgotPasswordIsVisible(){
+        this.forgotPassword.isVisible();
+    }
 
-    login: function(){
-        browser.click(this.loginPage.loginButton)
-    },
+    setData(user, pass) {
+        this.usernameInput.setValue(user);
+        this.passwordInput.setValue(pass);
+    }
 
-    forgot: function(){
-        browser.click(this.loginPage.forgotPassword)
-    },
-    
-    getErrorMessage: function(){
-        return browser.getText(this.loginPage.errorMessageLabel);
-    },
-};
+    login(){
+        this.loginButton.click();
+    }
+
+    forgot(){
+        this.forgotPassword.click();
+    }
+
+    getErrorMessage(){
+        return this.errorMessageLabel.getText();
+    }
+
+}
+
+module.exports = new LoginPage();

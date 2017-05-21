@@ -1,23 +1,20 @@
 'use strict';
 
-module.exports = {
+class HeaderPage {
 
-    headerPage: {
-      usernameLabel: 	'.profile-card-name .profile-link-label',
-      userProfileImage: '.oneUserProfileCardTrigger .tooltipTrigger .profileTrigger'
-  	},
+    get usernameLabel()  { return browser.element('.profile-card-name .profile-link-label'); }
+    get userProfileImage()  { return browser.element('.oneUserProfileCardTrigger .tooltipTrigger .profileTrigger'); }
 
-    getUsername: function(done){
-    	var hp = this.headerPage;
+    getUsername(done) {
+      this.userProfileImage.waitForExist(30000);
+      this.userProfileImage.click();
 
-    	browser.waitForExist(hp.userProfileImage,30000);
-    	browser.click(hp.userProfileImage);
+      this.usernameLabel.waitForExist(30000);
+      return this.usernameLabel.getText();
 
-    	browser.waitForExist(hp.usernameLabel,30000);
-    	browser.waitForVisible(hp.usernameLabel,30000);
-    	
-    	return browser.getText(hp.usernameLabel);
-    	done();
+      done();
     }
-    
-};
+
+}
+
+module.exports = new HeaderPage();
