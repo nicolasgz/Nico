@@ -2,16 +2,16 @@
 
 class LoginPage {
 
-    get usernameInput()  { return browser.element('#username'); }
-    get passwordInput()  { return browser.element('#password'); }
-    get loginButton()  { return browser.element('#Login'); }
+    get usernameInput()     { return browser.element('#username'); }
+    get passwordInput()     { return browser.element('#password'); }
+    get loginButton()       { return browser.element('#Login'); }
     get rememberCheckbox()  { return browser.element('#rememberUn'); }
-    get rememberLabel()  { return browser.element('label[for="rememberUn"'); }
-    get forgotPassword()  { return browser.element('#forgot_password_link'); }
-    get logo()  { return browser.element('#logo'); }
-    get usernameLabel()  { return browser.element('label[for="username"'); }
-    get passwordLabel()  { return browser.element('label[for="password"'); }
-    get errorMessageLabel()  { return browser.element('#error'); }
+    get rememberLabel()     { return browser.element('label[for="rememberUn"'); }
+    get forgotPassword()    { return browser.element('#forgot_password_link'); }
+    get logo()              { return browser.element('#logo'); }
+    get usernameLabel()     { return browser.element('label[for="username"'); }
+    get passwordLabel()     { return browser.element('label[for="password"'); }
+    get errorMessageLabel() { return browser.element('#error'); }
 
     logoIsVisible(){
         this.logo.isVisible();
