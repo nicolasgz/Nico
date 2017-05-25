@@ -23,7 +23,31 @@ class UtilsPage {
   clickOnElementWithTitle(all_elements, title){
       var my_element;
       all_elements.waitForVisible(50000);
+      console.log('Title: ' + title);
       all_elements.value.forEach(function(elem){
+        console.log('browser.elementIdText(elem.ELEMENT).value: ' + browser.elementIdText(elem.ELEMENT).value);
+        if (browser.elementIdText(elem.ELEMENT).value == title) {
+          my_element = elem.ELEMENT;
+        }
+      });
+
+      if (my_element != null) {
+        browser.elementIdClick(my_element);
+        console.log('Clicked: ' + title);
+        return true;
+      }else{
+        return false;
+      }
+
+    }
+
+  clickOnElementWithTitleBySelector(selector, title){
+      browser.waitForExist(selector, 30000);
+      var all_elements = browser.elements(selector);
+      var my_element;
+      console.log('Title: ' + title);
+      all_elements.value.forEach(function(elem){
+        console.log('browser.elementIdText(elem.ELEMENT).value: ' + browser.elementIdText(elem.ELEMENT).value);
         if (browser.elementIdText(elem.ELEMENT).value == title) {
         	my_element = elem.ELEMENT;
         }
@@ -31,6 +55,7 @@ class UtilsPage {
 
       if (my_element != null) {
         browser.elementIdClick(my_element);
+        console.log('Clicked: ' + title);
         return true;
       }else{
         return false;
@@ -42,15 +67,14 @@ class UtilsPage {
       var retries = 5;
       var success = false;
 
-      console.log('best wait ever: >>>>>>>>>>>>>>');
-
       while (retries-- > 0 && !(success = element.isExisting())) {
         browser.pause(2000);
       }
     }
 
   isElementPresent(element){
-    this.waitForElementExists(element, 2000);
+    console.log('element present?');
+    element.waitForVisible(10000);
     return element.isExisting();
   }
 

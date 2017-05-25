@@ -1,13 +1,12 @@
 'use strict';
 var Utils = require('../pages/utils_page.js');
 
-class HeaderPage {
+class ContactsPage {
 
-    get magicSelector()  	{ return browser.element('i am a selector'); }
+    get contactsLabel()  	{ return browser.element('.active .slds-breadcrumb.slds-list--horizontal'); }
 
-    isBlahPresent() {
-    	magicSelector.waitForVisible(5000);
-      return Utils.isElementPresent(magicSelector);
+    isContactsLabelPresent() {
+      return Utils.isElementPresent(this.isContactsLabelPresent);
     }
 
 }

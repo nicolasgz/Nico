@@ -4,11 +4,11 @@ var Utils = require('../pages/utils_page.js');
 
 class CasesPage {
 
-    get casesLabel()  	{ return browser.element('.slds-breadcrumb__item .uiOutputText .lol'); }
+    get casesLabel()  	{ return browser.element('.slds-breadcrumb__item .uiOutputText'); }
 
     isCasesLabelPresent() {
-    	console.log('Cases page..')
-    	Utils.isElementPresent(this.casesLabel);
+    	return Utils.isElementPresent(this.casesLabel);
+
     }
 
 }

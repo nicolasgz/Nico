@@ -22,7 +22,7 @@ class HeaderPage {
     }
 
   	clickOnTabWithTitle(title){
-      var tabVisible = Utils.clickOnElementWithTitle(this.allTabs, title);
+      var tabVisible = Utils.clickOnElementWithTitleBySelector('[role="navigation"] a.slds-context-bar__label-action span', title);
 
       if (!tabVisible) {
         this.moreLabel.click();
