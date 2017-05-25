@@ -8,7 +8,7 @@ class HeaderPage {
   	get searchInput() 		{return browser.element('value');}
   	get homeTitle() 		{return browser.element('[href="#/home"]');}
   	get forecastsTitle() 	{return browser.element('.slds-context-bar__label-action .slds-truncate [role=presentation]');}
-  	get allTabs() 			{return browser.elements('[role="navigation"] a.slds-context-bar__label-action span');} 
+  	get allTabs() 			{return browser.elements('[role="navigation"] a.slds-context-bar__label-action span');}
     get moreOptions()   {return browser.elements('.overflowList .uiMenuItem');}
     get moreLabel()     {return browser.element('.moreLabel');}
 
@@ -22,15 +22,12 @@ class HeaderPage {
     }
 
   	clickOnTabWithTitle(title){
-      console.log(title);
-      
       var tabVisible = Utils.clickOnElementWithTitle(this.allTabs, title);
+
       if (!tabVisible) {
         this.moreLabel.click();
         Utils.clickOnElementWithTitle(this.moreOptions, title);
-        browser.pause(8000);
       }
-
 
   	}
 

@@ -154,7 +154,7 @@ exports.config = {
         tags: require('./src/tagProcessor')(process.argv),
         // <string[]> (expression) only execute the features or scenarios with
         // tags matching the expression
-        timeout: 20000,     // <number> timeout for step definitions
+        timeout: 99999,     // <number> timeout for step definitions
         ignoreUndefinedDefinitions: false, // <boolean> Enable this config to
                                            // treat undefined definitions as
                                            // warnings.
