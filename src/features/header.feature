@@ -25,4 +25,3 @@ So that I can access all the tabs in the page
 			|Calendar		|
 			|People			|
 			|Cases			|
-			|Forecasts		|

@@ -6,7 +6,7 @@ class ContactsPage {
     get contactsLabel()  	{ return browser.element('.active .slds-breadcrumb.slds-list--horizontal'); }
 
     isContactsLabelPresent() {
-      return Utils.isElementPresent(this.isContactsLabelPresent);
+      return Utils.isElementPresent(this.contactsLabel);
     }
 
 }
