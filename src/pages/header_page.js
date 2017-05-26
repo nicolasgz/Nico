@@ -25,6 +25,7 @@ class HeaderPage {
       var tabVisible = Utils.clickOnElementWithTitleBySelector('[role="navigation"] a.slds-context-bar__label-action span', title);
 
       if (!tabVisible) {
+        this.moreLabel.waitForExist();
         this.moreLabel.click();
         Utils.clickOnElementWithTitle(this.moreOptions, title);
       }

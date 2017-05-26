@@ -41,80 +41,66 @@ module.exports = function() {
 				case 'Cases':
 				    expect(Cases.isCasesLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-				    browser.pause(2000);
 					break;
 
 				case 'Files':
 				    expect(Files.isFilesLabelPresent()).to
-				    .equal(true, `Expected that ${tab_title} is displayed.`);
-				    browser.pause(2000);
 					break;
 
 				case 'Opportunities':
 				    expect(Opportunities.isOpportunitiesLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-				    browser.pause(2000);
 					break;
 				
 				case 'Leads':
 				    expect(Leads.isLeadsLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-					browser.pause(2000);
 					break;
 
 				case 'Tasks':
 				    expect(Tasks.isTasksLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-					browser.pause(2000);
 					break;
 				
 				case 'Accounts':
 				    expect(Accounts.isAccountsLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-					browser.pause(2000);
 					break;
 
 				case 'Contacts':
 				    expect(Contacts.isContactsLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-					browser.pause(2000);
 					break;
 
 				case 'Campaigns':
 				    expect(Campaigns.isCampaignsLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-					browser.pause(2000);
 					break;
 
 				case 'Dashboards':
 				    expect(Dashboards.isDashboardsLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-					browser.pause(2000);
 					break;
 
 
 				case 'Reports':
 				    expect(Reports.isReportsLabelPresent()).to
-				    .equal(true, `Expected that ${tab_title} is displayed.`);
-					browser.pause(2000);
+				    .equal(true, `Expected that ${tab_title} is displayed.`);		
 					break;
 
 				case 'Groups':
 				    expect(Groups.isGroupsLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-					browser.pause(2000);
 					break;
 
 				case 'Calendar':
 				    expect(Calendar.isCalendarLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-					browser.pause(2000);
 					break;
 
 				case 'People':
 				    expect(People.isPeopleLabelPresent()).to
 				    .equal(true, `Expected that ${tab_title} is displayed.`);
-					browser.pause(2000);
 					break;
 
 				default:
