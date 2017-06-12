@@ -17,7 +17,8 @@ https://www.howtogeek.com/211541/homebrew-for-os-x-easily-installs-desktop-apps-
 - $ selenium-standalone start [verify]
 ## Instalar chromedriver:
 - $ brew install chromedriver
-## Ir por la terminal a la ruta del proyecto y correr: $ npm install -g
+## Ir por la terminal a la ruta del proyecto y correr:
+- $ npm install -g
 ## Si falla instalar las dependencias que wdio informe faltantes como:
 - $ npm install [dependency] -g
 
