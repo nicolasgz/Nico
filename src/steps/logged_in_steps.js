@@ -4,6 +4,6 @@ module.exports = function() {
 
     this.When(/^Logged in message is displayed "([^"]*)"$/, function(message) {
     	var logged_in_label = LoggedInPage.getLoggedInLabel();
-    	expect(message).to.equal(logged_in_label, `Current logged in message: '${logged_in_label}' but expected message: '${message}'.`);
+    	expect(logged_in_label).to.include(message, `Current logged in message: '${logged_in_label}' but expected message: '${message}'.`);
     });
 };

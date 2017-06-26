@@ -1,13 +1,13 @@
 Feature: Example
 
-	Scenario: login > correct
+	Scenario: login > correct username and password
 		Given I open the url "http://the-internet.herokuapp.com/"
 		And I go to the link "login"
 		When I set the username "tomsmith" and password "SuperSecretPassword!"
 		When I click Login button
 		Then Logged in message is displayed "You logged into a secure area!"
 
-	Scenario Outline: login > wrong
+	Scenario Outline: login > wrong username and/or password
 		Given I open the url "http://the-internet.herokuapp.com/"
 		And I go to the link "login"
 		When I set the username "<username>" and password "<password>"
@@ -18,7 +18,7 @@ Feature: Example
 		Examples:
 		|username 		|password 				|error 	|
 		| 				| 						|Your username is invalid!|
-		|tomsmith 		|						|Your username is invalid!|
+		|tomsmith 		|						|Your password is invalid!|
 		|				|SuperSecretPassword! 	|Your username is invalid!|
 		|wrongUsername	|SuperSecretPassword! 	|Your username is invalid!|
 		|tomsmith 		|wrongPassword 			|Your password is invalid!|
