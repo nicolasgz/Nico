@@ -103,7 +103,6 @@ class TablesPage {
     	return true;
     }
 
-
 }
 
 module.exports = new TablesPage();
