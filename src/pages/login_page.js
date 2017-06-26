@@ -2,72 +2,33 @@
 
 class LoginPage {
 
-    get usernameInput()     { return browser.element('#username'); }
-    get passwordInput()     { return browser.element('#password'); }
-    get loginButton()       { return browser.element('#Login'); }
-    get rememberCheckbox()  { return browser.element('#rememberUn'); }
-    get rememberLabel()     { return browser.element('label[for="rememberUn"'); }
-    get forgotPassword()    { return browser.element('#forgot_password_link'); }
-    get logo()              { return browser.element('#logo'); }
-    get usernameLabel()     { return browser.element('label[for="username"'); }
-    get passwordLabel()     { return browser.element('label[for="password"'); }
-    get errorMessageLabel() { return browser.element('#error'); }
+    get usernameInput()  { return browser.element('#username'); }
+    get passwordInput()  { return browser.element('#password'); }
+    get loginButton()    { return browser.element("[type='submit'] .fa-sign-in"); }
+    get errorLabel()     { return browser.element('.flash.error'); }
 
-    logoIsVisible(){
-        this.logo.isVisible();
+    setUsername(username){
+        this.usernameInput.waitForVisible();
+        this.usernameInput.setValue(username);
     }
 
-    rememberLabelIsVisible(){
-        this.rememberLabel.isVisible();
+    setPassword(username){
+        this.passwordInput.waitForVisible();
+        this.passwordInput.setValue(username);
     }
 
-    usernameLabelIsVisible(){
-        this.usernameLabel.isVisible();
-    }
-
-    passwordLabelIsVisible(){
-        this.passwordLabel.isVisible();
-    }
-
-    usernameInputIsVisible(){
-        this.usernameInput.isVisible();
-    }
-
-    passwordInputIsVisible(){
-        this.passwordInput.isVisible();
-    }
-
-    loginButtonIsVisible(){
-        this.loginButton.isVisible();
-    }
-
-    rememberCheckboxIsVisible(){
-        this.rememberCheckbox.isVisible();
-    }
-
-    rememberLabelIsVisible(){
-        this.rememberLabel.isVisible();
-    }
-
-    forgotPasswordIsVisible(){
-        this.forgotPassword.isVisible();
-    }
-
-    setData(user, pass) {
-        this.usernameInput.setValue(user);
-        this.passwordInput.setValue(pass);
-    }
-
-    login(){
+    clickLoginButton(){
+        this.loginButton.waitForVisible();
         this.loginButton.click();
     }
 
-    forgot(){
-        this.forgotPassword.click();
+    getErrorLabel(){
+        this.errorLabel.waitForVisible();
+        return this.errorLabel.getText().trim().replace(/\r?\n|\r/,"");
     }
 
-    getErrorMessage(){
-        return this.errorMessageLabel.getText();
+    isLoginButtonPresent(){
+        return this.loginButton.isVisible();
     }
 
 }
