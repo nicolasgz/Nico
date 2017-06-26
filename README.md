@@ -36,4 +36,15 @@ Automation: Cucumber + WebdriverIO + JS
 ## To run all features: wdio
 ## To run an specific feature: wdio wdio.conf.js --spec ./src/features/<feature_name>.feature
 
-## Webdriver documentation: http://webdriver.io/
+## Webdriver documentation:
+- http://webdriver.io/
+## Chai documentation:
+- http://chaijs.com/
+- https://www.npmjs.com/package/chai-webdriver
+## Introduction to javascript:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+- https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+## CSS & XPATH guide:
+- https://www.simple-talk.com/dotnet/.net-framework/xpath,-css,-dom-and-selenium-the-rosetta-stone/
+## Cucumber:
+- https://github.com/cucumber/cucumber/blob/master/docs/gherkin.md
