@@ -7,6 +7,7 @@ Automation: Cucumber + WebdriverIO + JS
 - Cucumber
 - Cucumber Step FInder
 - AllAutocomplete
+- EsLint
 ## Download SourceTree: https://www.sourcetreeapp.com/
 ## Install brew: https://brew.sh/
 ## Install xcode from Apple Store.
@@ -14,25 +15,9 @@ Automation: Cucumber + WebdriverIO + JS
 ## Install node.js and NPM
 - $ brew install node
 - $ brew install npm
-## Open a console > move to the project folder > run: $ npm install -g
-## Install dependencies:
-- $ npm install webdriverio -g
-- $ npm install wdio-selenium-standalone-service -g
-- $ npm install babel-preset-es2015 --save
-- $ npm install chai -g
-- $ npm install --save-dev chai
-- $ npm install wdio-spec-reporter -g
-- $ npm install wdio-cucumber-framework -g
-## If needed install:
-- $ npm install selenium-standalone@latest -g
-- $ selenium-standalone install
-- $ selenium-standalone start
-- $ npm install babel-register -g
-- $ npm install babel-preset-es2015 -g
+## Open a console > move to the project folder > run: $ npm install
 ## Install chromedriver:
 - $ brew install chromedriver
-## Any missing dependency should be installed like:
-- $ npm install [dependency] -g
 ## To run all features:
 - wdio
 ## To run an specific feature:
