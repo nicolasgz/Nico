@@ -49,3 +49,5 @@ Automation: Cucumber + WebdriverIO + JS
 - https://www.simple-talk.com/dotnet/.net-framework/xpath,-css,-dom-and-selenium-the-rosetta-stone/
 ## Cucumber:
 - https://github.com/cucumber/cucumber/blob/master/docs/gherkin.md
+## PageObject:
+- https://martinfowler.com/bliki/PageObject.html
