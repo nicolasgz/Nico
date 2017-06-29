@@ -34,9 +34,9 @@ Automation: Cucumber + WebdriverIO + JS
 ## Any missing dependency should be installed like:
 - $ npm install [dependency] -g
 ## To run all features:
-- wdio
+- ./node_modules/.bin/wdio
 ## To run an specific feature:
-- wdio wdio.conf.js --spec ./src/features/<feature_name>.feature
+- ./node_modules/.bin/wdio wdio.conf.js --spec ./src/features/<feature_name>.feature
 ## Webdriver documentation:
 - http://webdriver.io/
 ## Chai documentation:
