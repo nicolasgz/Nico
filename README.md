@@ -15,9 +15,8 @@ Automation: Cucumber + WebdriverIO + JS
 ## Install node.js and NPM
 - $ brew install node
 - $ brew install npm
-## Open a console > move to the project folder > run: $ npm install
-## Install chromedriver:
-- $ brew install chromedriver
+## Open a console > move to the project folder > run:
+- $ npm install
 ## To run all features:
 - ./node_modules/.bin/wdio
 ## To run an specific feature:
