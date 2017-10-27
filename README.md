@@ -5,7 +5,7 @@ Automation: Cucumber + WebdriverIO + JS
 - Command + shift + p > Install Package Control
 - Command + shift + p > Package Control: Install Package
 - Cucumber
-- Cucumber Step FInder
+- Cucumber Step Finder
 - AllAutocomplete
 - EsLint
 ## Download SourceTree: https://www.sourcetreeapp.com/
