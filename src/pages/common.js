@@ -16,6 +16,7 @@ class common{
 	waitForYelpLoadingIconToDisappear(){
 
 		browser.waitForExist(".search-results-block .throbber-overlay[style*='display: none']");
+		browser.waitForExist(this.yelpLoadingIcon);
 
 	}
 
