@@ -21,7 +21,7 @@ exports.config = {
     reporters: ['spec'],
     // reporterOptions: {
     //     allure: {
-    //         outputDir: './src/reports/allure'
+    //         outputDir: 'allure-results'
     //     }
     // },
     // ============

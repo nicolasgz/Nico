@@ -1,8 +1,6 @@
 'use strict';
 
 class UtilsPage{
-	
-//Methods
 
   goTo(site){
  

@@ -1,28 +1,18 @@
 'use strict';
 
-class common{
+class Common{
 	
-
-	//Selectors
-	get yelpLoadingIcon() { return '.search-results-block .throbber-overlay[style*=\'display: none\']';}
+	get yelpLoadingIconSelector() { return '.search-results-block .throbber-overlay[style*=\'display: none\']';}
         
-
 	getYelpLoadingIcon(){
 
-		return browser.element(this.yelpLoadingIcon);
+		return browser.element(this.yelpLoadingIconSelector);
 
 	}
-
 	waitForYelpLoadingIconToDisappear(){
 
-		browser.waitForExist(".search-results-block .throbber-overlay[style*='display: none']");
-		browser.waitForExist(this.yelpLoadingIcon);
-
+		browser.waitForExist(this.yelpLoadingIconSelector);
 	}
-
-
 }
-
-
-module.exports = new common();
+module.exports = new Common();
 

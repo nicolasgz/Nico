@@ -1,6 +1,6 @@
-var HomePage = require('../pages/home_page.js');
-var SearchResultsPage = require('../pages/search_results_page.js');
-var FiltersPage = require('../pages/filters_page.js');
+var HomePage = require('../pages/homePage.js');
+var SearchResultsPage = require('../pages/searchResultsPage.js');
+var FiltersPage = require('../pages/filtersPage.js');
 
 module.exports = function() {
 
@@ -10,24 +10,24 @@ module.exports = function() {
 
     this.When(/^I append "([^"]*)" next to text within search bar$/, function(wordToBeAppended) {
         
-        var textWithAppendedWord = SearchResultsPage.getSearchInputText().concat(` ${wordToBeAppended}`);
-        SearchResultsPage.setSearchInput(textWithAppendedWord);
+      var textWithAppendedWord = SearchResultsPage.getSearchInputText().concat(` ${wordToBeAppended}`);
+      SearchResultsPage.setSearchInput(textWithAppendedWord);
+  
+    });
+
+    this.When(/^I click Search button, from Search Results Page$/, function() {
+
+       SearchResultsPage.clickSearchButton();
     
     });
 
-      this.When(/^I click "([^"]*)" button, from "([^"]*)"$/, function(button, page) {
+    this.When(/^I click All Filters button, from Filters Page$/, function() {
 
-         switch(page){
-
-          case "Search Results Page": SearchResultsPage.clickButton(button);
-          break;
-
-          case "Filters Page": FiltersPage.clickButton(button);
-          break;
-         }
+       FiltersPage.clickButton(button);
+    
     });
 
-     this.Then(/^I get results$/, function() {
+    this.Then(/^I get results$/, function() {
       
        console.log('\n******** Search results information for non-advertised records ********');
 
@@ -38,8 +38,6 @@ module.exports = function() {
 
        expect(SearchResultsPage.isSearchResultsVisible()).to.be.true;
 
-      
-
     });
 
     this.When(/^I show star raiting for each search result record$/, function() {
@@ -49,7 +47,7 @@ module.exports = function() {
     });
 
 
-     this.Then(/^"([^"]*)" option is contained in label search-header-title, from Search_Results_Page$/, function(searchOption) {
+    this.Then(/^"([^"]*)" option is contained in label search-header-title, from Search_Results_Page$/, function(searchOption) {
   
         var searchResultsLabel = SearchResultsPage.getSearchResultsLabel();
         console.log(searchResultsLabel);
@@ -57,7 +55,7 @@ module.exports = function() {
   
     });
 
-      this.When(/^I click first non-advertised record$/, function() {
+    this.When(/^I click first non-advertised record$/, function() {
         
         SearchResultsPage.clickNonAdvertisedRecordNumber(0);
 

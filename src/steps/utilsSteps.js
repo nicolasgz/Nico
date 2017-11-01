@@ -1,4 +1,4 @@
-	var UtilsPage = require('../pages/utils_page.js');
+	var UtilsPage = require('../pages/utilsPage.js');
 
 module.exports = function() {
 

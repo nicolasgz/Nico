@@ -35,3 +35,4 @@ Automation: Cucumber + WebdriverIO + JS
 - https://github.com/cucumber/cucumber/blob/master/docs/gherkin.md
 ## PageObject:
 - https://martinfowler.com/bliki/PageObject.html
+		

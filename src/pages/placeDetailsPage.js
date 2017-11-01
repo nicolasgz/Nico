@@ -1,19 +1,15 @@
 'use strict';
 
-class place_details{
+class PlaceDetails{
 	
-//Attributes
 
-	get address() 	  { return browser.element('.street-address>address');}
-	get phoneNumber() { return browser.element('.biz-phone');}
-	get webSite()     { return browser.element('.biz-website.js-add-url-tagging>a');}
-
+	get address() 	          { return browser.element('.street-address>address');}
+	get phoneNumber()         { return browser.element('.biz-phone');}
+	get webSite() 		      { return browser.element('.biz-website.js-add-url-tagging>a');}
 	get listCustomerReviews() { return browser.elements('.review-highlights-list p[class=quote]');}
 
-	get reviewsHighLights() { return '.review-highlights-list';}
-
-
-//Methods
+	
+	get reviewsHighLights()   { return '.review-highlights-list';}
 
 	waitForPageToLoad(){
 		browser.waitForExist(this.reviewsHighLights,500);
@@ -38,4 +34,4 @@ class place_details{
 		}
 	}
 }
-module.exports = new place_details();
+module.exports = new PlaceDetails();

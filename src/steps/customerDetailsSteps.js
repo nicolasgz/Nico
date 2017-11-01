@@ -1,5 +1,5 @@
 
-var PlaceDetailsPage = require('../pages/place_details_page.js');
+var PlaceDetailsPage = require('../pages/placeDetailsPage.js');
 
 module.exports = function() {
 
