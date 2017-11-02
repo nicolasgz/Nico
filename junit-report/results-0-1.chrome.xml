@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="filters" timestamp="2017-11-02T15:32:14" time="22.672" tests="0" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="12e0ed1ba772b222137a03994242df2f"/>
+      <property name="suiteName" value="Filters"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value="./src/features/filters.feature"/>
+    </properties>
+  </testsuite>
+  <testsuite name="filter_by_neighbourhood_and_price" timestamp="2017-11-02T15:32:14" time="22.67" tests="8" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="12e0ed1ba772b222137a03994242df2f"/>
+      <property name="suiteName" value="Filter by 'Neighbourhood' and 'Price'"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value="./src/features/filters.feature"/>
+    </properties>
+    <testcase classname="chrome.filter_by_neighbourhood_and_price" name="i_open_the_url_https_yelp_com" time="41.005"/>
+    <testcase classname="chrome.filter_by_neighbourhood_and_price" name="i_set_the_searchinput_to_restaurants" time="35.864"/>
+    <testcase classname="chrome.filter_by_neighbourhood_and_price" name="i_append_pizza_next_to_text_within_search_bar" time="25.439"/>
+    <testcase classname="chrome.filter_by_neighbourhood_and_price" name="i_click_search_button_from_search_results_page" time="25.1"/>
+    <testcase classname="chrome.filter_by_neighbourhood_and_price" name="i_click_all_filters_button_from_filters_page" time="22.917"/>
+    <testcase classname="chrome.filter_by_neighbourhood_and_price" name="i_filter_by_financial_district_at_neighbourhoods_section" time="22.747"/>
+    <testcase classname="chrome.filter_by_neighbourhood_and_price" name="i_filter_by_2_1_at_price_section" time="20.565"/>
+    <testcase classname="chrome.filter_by_neighbourhood_and_price" name="i_get_results" time="18.459"/>
+  </testsuite>
+</testsuites>
