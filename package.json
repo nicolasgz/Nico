@@ -9,7 +9,9 @@
     "test": "npm run test:validate && npm run test:unit && npm run test:features",
     "test:features": "npm run-script local-webserver & (wdio wdio.BUILD.conf.js; wdio_ret=$?; kill $(lsof -t -i:8080); exit $wdio_ret)",
     "test:unit": "jest --config=jest.json",
-    "test:validate": "eslint 'src/**/*.js' 'test/**/*.js!(setup.js)'"
+    "test:validate": "eslint 'src/**/*.js' 'test/**/*.js!(setup.js)'",
+    "xunit-viewer": "node_modules/.bin/xunit-viewer"
+
   },
   "repository": {
     "type": "git",
