@@ -4,14 +4,11 @@
   "description": "Boilerplate project to run WebdriverIO tests with Cucumber",
   "homepage": "https://github.com/webdriverio/cucumber-boilerplate",
   "scripts": {
-    "clean": "read -p \"Are you sure you want to clean the project? [y/n] \" -n 1 -r; if [[ $REPLY =~ ^[Yy]$ ]]; then sudo rm -R .git .github demo-app test .codeclimate.yml .travis.yml jest.json wdio.BUILD.conf.js src/features/**; fi",
-    "local-webserver": "http-server ./demo-app -s",
-    "test": "npm run test:validate && npm run test:unit && npm run test:features",
-    "test:features": "npm run-script local-webserver & (wdio wdio.BUILD.conf.js; wdio_ret=$?; kill $(lsof -t -i:8080); exit $wdio_ret)",
-    "test:unit": "jest --config=jest.json",
-    "test:validate": "eslint 'src/**/*.js' 'test/**/*.js!(setup.js)'",
-    "xunit-viewer": "node_modules/.bin/xunit-viewer"
-
+    "clean": "rimraf allure-report && rimraf allure-results",
+    "test": "npm run clean && (npm run test:wdio; exit 0;) && npm run test:report",
+    "test:wdio": "wdio",
+    "test:report": "allure generate && allure open",
+    "serve": "http-server allure-report"
   },
   "repository": {
     "type": "git",
@@ -45,15 +42,13 @@
     "eslint-plugin-react": "^7.1.0",
     "http-server": "~0.10.0",
     "jest": "~20.0.0",
-    "js2xmlparser": "^3.0.0",
     "node-gyp": "^3.6.2",
     "wdio-allure-reporter": "0.0.2",
     "wdio-cucumber-framework": "^0.2.17",
-    "wdio-junit-reporter": "^0.3.1",
     "wdio-phantomjs-service": "~0.2.2",
     "wdio-selenium-standalone-service": "0.0.8",
     "wdio-spec-reporter": "~0.1.0",
-    "webdriverio": "^4.8.0",
-    "xunit-reports-viewer": "^1.0.7"
-  }
+    "webdriverio": "^4.8.0"
+  },
+  "dependencies": {}
 }

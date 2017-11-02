@@ -18,15 +18,13 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
     //
-    reporters: ['spec','junit'],
-    reporterOptions: {
-        junit: {
-            outputDir: './junit-report',
-            outputFileFormat: function(opts) { // optional
-                return `results-${opts.cid}.${opts.capabilities}.xml`
-            }
-        }
-    },
+    reporters: ['spec'], //'allure'],
+    // reporterOptions: {
+    //     allure: {
+    //         outputDir: 'allure-results'
+    //     }
+    // },
+    
     // ============
     // Capabilities
     // ============
