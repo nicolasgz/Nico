@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="customer_details" timestamp="2017-11-02T15:31:53" time="20.365" tests="0" failures="0" errors="0" skipped="0">
+  <testsuite name="customer_details" timestamp="2017-11-02T16:22:44" time="19.48" tests="0" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="ed9d79d1c0ce5a43888bc6330a5d0617"/>
       <property name="suiteName" value="Customer Details"/>
@@ -8,18 +8,18 @@
       <property name="file" value="./src/features/customerDetails.feature"/>
     </properties>
   </testsuite>
-  <testsuite name="get_into_first_non_advertised_record_and_report_critical_information_on_console" timestamp="2017-11-02T15:31:53" time="20.362" tests="6" failures="0" errors="0" skipped="0">
+  <testsuite name="get_into_first_non_advertised_record_and_report_critical_information_on_console" timestamp="2017-11-02T16:22:44" time="19.477" tests="6" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="ed9d79d1c0ce5a43888bc6330a5d0617"/>
       <property name="suiteName" value="Get into first non-advertised record, and report critical information on console"/>
       <property name="capabilities" value="chrome"/>
       <property name="file" value="./src/features/customerDetails.feature"/>
     </properties>
-    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_open_the_url_https_yelp_com" time="62.867"/>
-    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_set_the_searchinput_to_restaurants" time="58.339"/>
-    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_get_results" time="47.58"/>
-    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_click_first_non_advertised_record" time="47.454"/>
-    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_get_into_customer_details_page" time="42.863"/>
-    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_report_critical_information_on_console" time="42.838"/>
+    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_open_the_url_https_yelp_com" time="56.023"/>
+    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_set_the_searchinput_to_restaurants" time="50.763"/>
+    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_get_results" time="44.795"/>
+    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_click_first_non_advertised_record" time="44.677"/>
+    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_get_into_customer_details_page" time="36.897"/>
+    <testcase classname="chrome.get_into_first_non_advertised_record_and_report_critical_information_on_console" name="i_report_critical_information_on_console" time="36.871"/>
   </testsuite>
 </testsuites>

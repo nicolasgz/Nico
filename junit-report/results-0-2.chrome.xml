@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="search_for_restaurants" timestamp="2017-11-02T15:32:39" time="16.598" tests="0" failures="0" errors="0" skipped="0">
+  <testsuite name="search_for_restaurants" timestamp="2017-11-02T16:23:21" time="18.554" tests="0" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="13ea0b5d5ab797a82fefcaf98bf5684f"/>
       <property name="suiteName" value="Search for Restaurants"/>
@@ -8,17 +8,17 @@
       <property name="file" value="./src/features/searchForRestaurants.feature"/>
     </properties>
   </testsuite>
-  <testsuite name="append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" timestamp="2017-11-02T15:32:39" time="16.595" tests="5" failures="0" errors="0" skipped="0">
+  <testsuite name="append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" timestamp="2017-11-02T16:23:21" time="18.551" tests="5" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="13ea0b5d5ab797a82fefcaf98bf5684f"/>
       <property name="suiteName" value="Append &quot;Pizza&quot; next to &quot;Restaurants&quot; in search input from Search Results page, and click search button."/>
       <property name="capabilities" value="chrome"/>
       <property name="file" value="./src/features/searchForRestaurants.feature"/>
     </properties>
-    <testcase classname="chrome.append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" name="i_open_the_url_https_yelp_com" time="16.782"/>
-    <testcase classname="chrome.append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" name="i_set_the_searchinput_to_restaurants" time="12.193"/>
-    <testcase classname="chrome.append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" name="i_append_pizza_next_to_text_within_search_bar" time="2.963"/>
-    <testcase classname="chrome.append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" name="i_click_search_button_from_search_results_page" time="2.635"/>
-    <testcase classname="chrome.append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" name="i_get_results" time="0.33"/>
+    <testcase classname="chrome.append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" name="i_open_the_url_https_yelp_com" time="18.738"/>
+    <testcase classname="chrome.append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" name="i_set_the_searchinput_to_restaurants" time="13.328"/>
+    <testcase classname="chrome.append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" name="i_append_pizza_next_to_text_within_search_bar" time="2.978"/>
+    <testcase classname="chrome.append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" name="i_click_search_button_from_search_results_page" time="2.63"/>
+    <testcase classname="chrome.append_pizza_next_to_restaurants_in_search_input_from_search_results_page_and_click_search_button" name="i_get_results" time="0.36"/>
   </testsuite>
 </testsuites>
